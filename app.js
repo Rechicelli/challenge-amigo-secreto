@@ -32,11 +32,13 @@ function mostrarAmigos() {
 }
 
 function sortearAmigo() {
-  if (amigos.length <= 0) {
-    alert("No hay amigos disponibles. Escribe un nombre para jugar.");
+  if (amigos.length < 2) {
+    alert("Debes ingresar al menos dos amigos para poder jugar.");
   } else {
     const numeroAmigo = Math.floor(Math.random() * amigos.length);
-    document.getElementById("resultado").innerHTML = amigos[numeroAmigo];
+    document.getElementById(
+      "resultado"
+    ).innerHTML = `El amigo secreto es: ${amigos[numeroAmigo]}`;
     //console.log(amigos[numeroAmigo]);
   }
 }
